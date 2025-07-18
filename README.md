@@ -1,3 +1,8 @@
+# This is a fork
+
+This is a fork of [`wernight/docker-duplicity`](https://github.com/wernight/docker-duplicity).
+Many links/etc below are out of date currently.  Images will be pushed to this repo's packages.
+
 # Supported tags and respective `Dockerfile` links
 
   * [`latest`](https://github.com/wernight/docker-duplicity/blob/master/latest/Dockerfile)
