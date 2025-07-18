@@ -6,13 +6,6 @@ ENV HOME=/home/duplicity
 RUN set -x \
  && apk add --no-cache \
         gnupg \
-        libffi \
-        librsync \
-        libxml2 \
-        libxslt \
-        openssh \
-        openssl \
-        rsync \
 	duplicity 
 
 RUN set -x \
