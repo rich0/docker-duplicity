@@ -5,22 +5,15 @@ ENV HOME=/home/duplicity
 
 RUN set -x \
  && apk add --no-cache \
-        ca-certificates \
-        gettext \
         gnupg \
-        lftp \
         libffi \
         librsync \
         libxml2 \
         libxslt \
         openssh \
         openssl \
-        poetry \
-        python3 \
-        py3-paramiko \
         rsync \
-	duplicity \
- && update-ca-certificates
+	duplicity 
 
 RUN set -x \
     # Run as non-root user.
@@ -28,6 +21,7 @@ RUN set -x \
  && mkdir -p /home/duplicity/.cache/duplicity \
  && mkdir -p /home/duplicity/.gnupg \
  && chmod -R go+rwx /home/duplicity/ \
+ && chown -R duplicity:duplicity /home/duplicity \
  && chmod -R 700 /home/duplicity/.gnupg
 
 VOLUME ["/home/duplicity/.cache/duplicity", "/home/duplicity/.gnupg"]
