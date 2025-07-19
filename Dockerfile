@@ -10,7 +10,7 @@ RUN set -x \
 
 RUN set -x \
     # Run as non-root user.
- && adduser -D -u 1896 duplicity \
+ && adduser -D -u 1000 duplicity \
  && mkdir -p /home/duplicity/.cache/duplicity \
  && mkdir -p /home/duplicity/.gnupg \
  && chmod -R go+rwx /home/duplicity/ \
