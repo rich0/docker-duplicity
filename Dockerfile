@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/alpine
-FROM alpine:3.23
+FROM alpine:3.24
 
 ENV HOME=/home/duplicity
 
