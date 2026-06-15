@@ -6,7 +6,8 @@ ENV HOME=/home/duplicity
 RUN set -x \
  && apk add --no-cache \
         gnupg \
-	duplicity 
+	duplicity \
+	py3-pexpect
 
 RUN set -x \
     # Run as non-root user.
