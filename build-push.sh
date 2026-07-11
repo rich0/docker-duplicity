@@ -1,2 +1,7 @@
 #!/bin/bash
-docker build . --pull --no-cache --tag ghcr.io/rich0/docker-duplicity:latest && docker push ghcr.io/rich0/docker-duplicity:latest
+set -euo pipefail
+
+IMAGE=registry.rich0.org/public/docker-duplicity
+
+docker build . --pull --no-cache --tag "${IMAGE}:latest"
+docker push "${IMAGE}:latest"

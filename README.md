@@ -1,12 +1,29 @@
 # This is a fork
 
 This is a fork of [`wernight/docker-duplicity`](https://github.com/wernight/docker-duplicity).
-Many links/etc below are out of date currently.  Images will be pushed to this repo's packages.
+Many links/examples below are still from upstream and may be out of date.
 
-# Supported tags and respective `Dockerfile` links
+## Image
 
-  * [`latest`](https://github.com/wernight/docker-duplicity/blob/master/latest/Dockerfile)
-  * [`stable`](https://github.com/wernight/docker-duplicity/blob/master/stable/Dockerfile)
+- Registry: `registry.rich0.org/public/docker-duplicity` (Zot, public anonymous pull)
+- Tag: `latest`
+
+### Pull
+
+```bash
+docker pull registry.rich0.org/public/docker-duplicity:latest
+```
+
+Public pulls do not require login.
+
+### Publish
+
+```bash
+docker login registry.rich0.org -u ci-push -p '<password>'
+./build-push.sh
+```
+
+Pins and publishes `registry.rich0.org/public/docker-duplicity:latest`.
 
 # What is Duplicity?
 
